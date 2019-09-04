@@ -1,0 +1,48 @@
+#app {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    padding: 10px;
+    grid-gap: 10px;
+    
+}
+
+.templetButton {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    position: relative;
+    min-height: 200px;
+}
+/* inputCheckboxes  */
+.inputCheckboxes {
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    padding: 10px;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.inputCheckboxesContent {
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+.mainBtn {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+hr {
+    height: 5px;
+    background-color: red;
+}

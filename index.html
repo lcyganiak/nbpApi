@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+   
+
+    <div class="inputCheckboxes">
+        <div class="inputCheckboxesContent"><input type="radio" name="tabela" value="a"> Tabela A</div>
+        <div class="inputCheckboxesContent"><input type="radio" name="tabela" value="b"> Tabela B</div>
+        <div class="inputCheckboxesContent"><input type="radio" name="tabela"  value="c"> Tabela C</div>
+    </div>
+
+
+    <div class="main-grid">
+
+        <!-- pobieranie tabeli A B C  -->
+        <div class="templetButton">
+            <p class="opis">Klikając w przycisk pobierzesz kurs walut z dnia <span id="dataKursu"></span></p>
+            <button type="button" class="btn btn-primary mainBtn" onclick="getTable()" >get Data</button>
+
+        </div>
+        <!-- end  pobieranie tabeli A B C  -->
+
+
+        <!-- pobieranie tabeli A B C z liczbą zwracanych serii -->
+        <div class="templetButton">
+            <p class="opis">Klikając w przycisk pobierzesz kurs walut z dnia wraz poprzedzającymi dniami których liczbę
+                wybierzesz w poniższym selecie</p>
+            <select class="form-control" id="selectTopCount" >
+                <option value="1">Ilości 1</option>
+                <option value="2">Ilości 2</option>
+                <option value="3">Ilości 3</option>
+                <option value="4">Ilości 4</option>
+                <option value="5">Ilości 5</option>
+            </select>
+            <button type="button" class="btn btn-primary mainBtn" onclick="handleLastCount()">get Data</button>
+        </div>
+        <!-- pobieranie tabeli A B C z liczbą zwracanych serii -->
+
+
+        <!-- pobieranie tabeli A B C z konkretnej daty -->
+        <div class="templetButton">
+            <p class="opis">Po podaniu daty  kurs z danego dnia </p>
+            <label for="dataKursuBox3">Data Kursu walut </label>
+            <input class="form-control" type="date"  id="example-date-input dataKursuBox3" value="" name="dataBox3">
+            <button type="button" class="btn btn-primary mainBtn" onclick="getTableWithData()">get Data</button>
+        </div>
+        <!-- end pobieranie tabeli A B C z konkretnej daty -->
+
+        <!-- pobieranie tabeli A B C z przedziału dat -->
+        <div class="templetButton">
+                <label for="dataKursuStart">Data początkowa </label>
+                <input class="form-control" type="date" value="2011-08-19" id="example-date-input dataKursuStart">
+                <label for="dataKursuEnd">Data konicowa </label>
+                <input class="form-control" type="date" value="2011-08-19" id="example-date-input dataKursuEnd">
+                <button type="button" class="btn btn-primary mainBtn">get Data</button>
+            </div>
+        <!-- end pobieranie tabeli A B C z przedziału dat -->
+
+        <!-- pobieranie tabeli według symbolu waluty -->
+        <div class="templetButton">
+            <p class="opis">
+                Kurs dla konkretnej waluty 
+            </p>
+                <select class="form-control" id="exampleFormControlSelect1">
+                        <option value="USD">Dolar amerykański</option>
+                        <option value="EUR">EURO</option>
+                        <option value="UAH"> Hrywna</option>
+                        <option value="GBP">Funt szterling</option>
+                        <option value="CHF">Frank szwajcarski</option>
+                    </select>
+            
+            
+            <button type="button" class="btn btn-primary mainBtn" onclick="getOneCoin()">get Data</button>
+        
+        
+        </div>
+        <!-- end pobieranie tabeli według symbolu waluty -->
+
+    </div>
+
+    <div id="app"></div>
+
+    <!-- <div class="card">
+        <div class="card-body">
+
+        </div>
+    </div> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
